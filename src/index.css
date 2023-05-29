@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --dark-gray: #243447;
+  --light-gray: #64748b;
+  --light-black: #0d182a;
+  --light-blue: #7289da;
+  --light-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  --transition: all linear 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  background-color: #f9fafc;
+}
+
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--light-gray);
+  word-spacing: 1px;
+}
+
+button {
+  font-family: inherit;
+  letter-spacing: 1px;
+}
+
+/* TOURS */
+/* ======= */
+
+.tours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.tours-h1 {
+  text-align: center;
+  margin-bottom: 0.3em;
+  font-size: 2rem;
+  color: var(--dark-gray);
+}
+
+.underline {
+  width: 100px;
+  height: 3px;
+  background-color: var(--light-blue);
+  margin-bottom: 2em;
+}
+
+/* TOUR-CARD */
+/* ======== */
+.tour-card {
+  background-color: white;
+  margin-bottom: 2em;
+  position: relative;
+  box-shadow: var(--light-shadow);
+  border-radius: 10px;
+  transition: var(--transition);
+  cursor: default;
+  border: none;
+}
+
+.tour-card:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.tour-img {
+  border-radius: 10px 10px 0px 0px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.tour-card-footer {
+  padding: 2em 1.2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-h3 {
+  margin: 0;
+  align-self: center;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  color: var(--light-blue);
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.delete-btn {
+  text-transform: capitalize;
+  padding: 0.2em;
+  background-color: transparent;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+  color: var(--light-blue);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+}
+
+.delete-btn:hover {
+  background-color: var(--light-blue);
+  color: white;
+  cursor: pointer;
+  box-shadow: var(--dark-shadow);
+}
+
+.tour-price {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: var(--light-blue);
+  padding: 0.3em;
+  border-top-right-radius: 10px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* NO TOURS LEFT */
+/* ============ */
+.no-tours-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-tour-left-h1 {
+  margin-top: 3em;
+  color: var(--dark-gray);
+}
+.refresh-btn {
+  background-color: var(--light-blue);
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.1rem;
+}
+
+@media (min-width: 650px) {
+  .tour-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2em;
+  }
+}
+
+@media (min-width: 940px) {
+  .tour-card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
